@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PDFList from './components/PDFList';
+import { Data } from './data/PDFListData';
+import IPDFList from './models/PDFList.model';
+
+
 
 function App() {
+  const data: IPDFList[] = Data;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className="small-space ">
+      <div className='container'>
+        <h1 className='main-title'>PDF Reader with Searching and Navigating</h1>
+        <PDFList lists={data} />
+      </div>
     </div>
   );
 }
